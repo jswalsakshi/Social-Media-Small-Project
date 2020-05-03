@@ -15,6 +15,7 @@
 		6CB911F42444BB190012EC94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB911F22444BB190012EC94 /* Main.storyboard */; };
 		6CB911F62444BB1B0012EC94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB911F52444BB1B0012EC94 /* Assets.xcassets */; };
 		6CB911F92444BB1B0012EC94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB911F72444BB1B0012EC94 /* LaunchScreen.storyboard */; };
+		CC6279EB46D7E5E9C698433A /* Pods_Social_Media_Small_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB29BD6D0D77AC56DCB36E /* Pods_Social_Media_Small_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		6CB911F52444BB1B0012EC94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CB911F82444BB1B0012EC94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CB911FA2444BB1B0012EC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F3E345807422F8410C529E /* Pods-Social Media Small Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media Small Project.release.xcconfig"; path = "Target Support Files/Pods-Social Media Small Project/Pods-Social Media Small Project.release.xcconfig"; sourceTree = "<group>"; };
+		AE41DFCAE88048619A6D55A6 /* Pods-Social Media Small Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media Small Project.debug.xcconfig"; path = "Target Support Files/Pods-Social Media Small Project/Pods-Social Media Small Project.debug.xcconfig"; sourceTree = "<group>"; };
+		FFEB29BD6D0D77AC56DCB36E /* Pods_Social_Media_Small_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Media_Small_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +39,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6279EB46D7E5E9C698433A /* Pods_Social_Media_Small_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2681E03F1B60FF6A4624A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE41DFCAE88048619A6D55A6 /* Pods-Social Media Small Project.debug.xcconfig */,
+				A5F3E345807422F8410C529E /* Pods-Social Media Small Project.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6C0D39E42449CF350044EE56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +69,8 @@
 			children = (
 				6CB911EB2444BB190012EC94 /* Social Media Small Project */,
 				6CB911EA2444BB190012EC94 /* Products */,
+				4D2681E03F1B60FF6A4624A9 /* Pods */,
+				A564CC80FB33990B857806D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +98,14 @@
 			path = "Social Media Small Project";
 			sourceTree = "<group>";
 		};
+		A564CC80FB33990B857806D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFEB29BD6D0D77AC56DCB36E /* Pods_Social_Media_Small_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CB911FD2444BB1B0012EC94 /* Build configuration list for PBXNativeTarget "Social Media Small Project" */;
 			buildPhases = (
+				4E7AE119AA98C19F1F171A15 /* [CP] Check Pods Manifest.lock */,
 				6CB911E52444BB190012EC94 /* Sources */,
 				6CB911E62444BB190012EC94 /* Frameworks */,
 				6CB911E72444BB190012EC94 /* Resources */,
+				F0B21338459E39AD8A6471F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E7AE119AA98C19F1F171A15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Social Media Small Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0B21338459E39AD8A6471F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Media Small Project/Pods-Social Media Small Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Media Small Project/Pods-Social Media Small Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Social Media Small Project/Pods-Social Media Small Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6CB911E52444BB190012EC94 /* Sources */ = {
@@ -298,6 +367,7 @@
 		};
 		6CB911FE2444BB1B0012EC94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE41DFCAE88048619A6D55A6 /* Pods-Social Media Small Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +386,7 @@
 		};
 		6CB911FF2444BB1B0012EC94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F3E345807422F8410C529E /* Pods-Social Media Small Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
